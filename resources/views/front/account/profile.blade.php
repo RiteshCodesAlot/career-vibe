@@ -26,17 +26,17 @@
                             <h3 class="fs-4 mb-1">My Profile</h3>
                             <div class="mb-4">
                                 <label for="" class="mb-2">Name*</label>
-                                <input type="text" id="name" name="name" placeholder="Enter Name" class="form-control" value="{{ $user->name }}" >
+                                <input type="text" id="name" name="name" placeholder="Enter Name" class="form-control" value="{{ $user->name }}" style="border: 1.5px solid #6554C0;">
                                 <p></p>
                             </div>
                             <div class="mb-4">
                                 <label for="" class="mb-2">Email*</label>
-                                <input type="text" id="email" name="email" placeholder="Enter Email" class="form-control" value="{{ $user->email }}">
+                                <input type="text" id="email" name="email" placeholder="Enter Email" class="form-control" value="{{ $user->email }}" style="border: 1.5px solid #6554C0 ;">
                                 <p></p>
                             </div>
                             <div class="mb-4">
                                 <label for="" class="mb-2">Mobile</label>
-                                <input type="text" name="mobile" id="mobile" placeholder="Mobile" class="form-control" value="{{ $user->mobile }}">
+                                <input type="text" name="mobile" id="mobile" placeholder="Mobile" class="form-control" value="{{ $user->mobile }}" style="border: 1.5px solid #6554C0 ;">
                             </div>                        
                             </div>
                             <div class="card-footer  p-4">
@@ -52,17 +52,17 @@
                                 <h3 class="fs-4 mb-1">Change Password</h3>
                                 <div class="mb-4">
                                     <label for="" class="mb-2">Old Password*</label>
-                                    <input type="password" name="old_password" id="old_password" placeholder="Old Password" class="form-control">
+                                    <input type="password" name="old_password" id="old_password" placeholder="Old Password" class="form-control" style="border: 1.5px solid #6554C0;">
                                     <p></p>
                                 </div>
                                 <div class="mb-4">
                                     <label for="" class="mb-2">New Password*</label>
-                                    <input type="password" name="new_password" id="new_password" placeholder="New Password" class="form-control">
+                                    <input type="password" name="new_password" id="new_password" placeholder="New Password" class="form-control" style="border: 1.5px solid #6554C0 ;">
                                     <p></p>
                                 </div>
                                 <div class="mb-4">
                                     <label for="" class="mb-2">Confirm Password*</label>
-                                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="form-control">
+                                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="form-control" style="border: 1.5px solid #6554C0 ;">
                                     <p></p>
                                 </div>                        
                             </div>

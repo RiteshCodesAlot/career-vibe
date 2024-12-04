@@ -82,48 +82,51 @@
   </div>
 </div>
 
-<footer class="bg-dark py-4 bg-2" style="background-color: #1a1a1a; color: #ffffff; font-family: Arial, sans-serif;">
+<footer class="bg-light py-4 bg-2" style="background-color: #f8f9fa; color: #000000; font-family: Arial, sans-serif;">
+	<!-- Top Border -->
+	<div style="border-top: 5px solid #6554C0;"></div>
 	<div class="container">
-	  <div class="row" style="display: flex; flex-wrap: wrap;">
+	  <div class="row p-5" style="display: flex; flex-wrap: wrap;">
 		<!-- Company Info Section -->
 		<div class="col-md-4" style="margin-bottom: 20px; flex: 1; min-width: 250px;">
-		  <h5 style="font-weight: bold; border-bottom: 2px solid #ffffff; padding-bottom: 5px;">About Us</h5>
-		  <p style="font-size: 14px; line-height: 1.8; margin-top: 10px;">XYZ Company is dedicated to providing top-notch services and products. We strive for excellence and customer satisfaction.</p>
+		  <h5 style="font-weight: bold; border-bottom: 2px solid #6554C0; padding-bottom: 5px;">About Us</h5>
+		  <p style="font-size: 14px; line-height: 1.8; margin-top: 25px;">CareerVibe is your trusted platform to connect job seekers and employers. We aim to simplify career exploration and recruitment with innovative features and personalized support.</p>
 		</div>
 		
 		<!-- Quick Links Section -->
 		<div class="col-md-4" style="margin-bottom: 20px; flex: 1; min-width: 250px;">
-		  <h5 style="font-weight: bold; border-bottom: 2px solid #ffffff; padding-bottom: 5px;">Quick Links</h5>
-		  <ul style="list-style: none; padding: 0; margin-top: 10px;">
-			<li style="margin-bottom: 8px;"><a href="#" style="text-decoration: none; color: #ffffff; font-size: 14px;">Home</a></li>
-			<li style="margin-bottom: 8px;"><a href="#" style="text-decoration: none; color: #ffffff; font-size: 14px;">About Us</a></li>
-			<li style="margin-bottom: 8px;"><a href="#" style="text-decoration: none; color: #ffffff; font-size: 14px;">Services</a></li>
-			<li style="margin-bottom: 8px;"><a href="#" style="text-decoration: none; color: #ffffff; font-size: 14px;">Contact</a></li>
+		  <h5 style="font-weight: bold; border-bottom: 2px solid #6554C0; padding-bottom: 5px;">Quick Links</h5>
+		  <ul style="list-style: none; padding: 0; margin-top: 25px;">
+			<li style="margin-bottom: 8px;"><a href="{{ route('home') }}" style="text-decoration: none; color: #000000; font-size: 14px;">Home</a></li>
+			<li style="margin-bottom: 8px;"><a href="#" style="text-decoration: none; color: #000000; font-size: 14px;">Browse Jobs</a></li>
+			<li style="margin-bottom: 8px;"><a href="{{ route('jobs') }}" style="text-decoration: none; color: #000000; font-size: 14px;">Post a Job</a></li>
+			<li style="margin-bottom: 8px;"><a href="#" style="text-decoration: none; color: #000000; font-size: 14px;">Contact</a></li>
 		  </ul>
 		</div>
   
 		<!-- Contact Section -->
 		<div class="col-md-4" style="margin-bottom: 20px; flex: 1; min-width: 250px;">
-		  <h5 style="font-weight: bold; border-bottom: 2px solid #ffffff; padding-bottom: 5px;">Contact Us</h5>
-		  <p style="font-size: 14px; line-height: 1.8; margin-top: 10px;">
-			<strong>Email:</strong> info@xyzcompany.com<br>
-			<strong>Phone:</strong> +1 234 567 890<br>
-			<strong>Address:</strong> 123 Business St., City, Country
+		  <h5 style="font-weight: bold; border-bottom: 2px solid #6554C0; padding-bottom: 5px;">Contact Us</h5>
+		  <p style="font-size: 14px; line-height: 1.8; margin-top: 25px;">
+			<strong>Email:</strong> support@careervibe.com<br>
+			<strong>Phone:</strong> +1 800 555 1234<br>
+			<strong>Address:</strong> 456 Talent Drive, City, Country
 		  </p>
 		  <div style="margin-top: 10px;">
-			<a href="#" style="text-decoration: none; color: #ffffff; margin-right: 15px; font-size: 18px;"><i class="fab fa-facebook"></i> Facebook</a>
-			<a href="#" style="text-decoration: none; color: #ffffff; margin-right: 15px; font-size: 18px;"><i class="fab fa-twitter"></i> Twitter</a>
-			<a href="#" style="text-decoration: none; color: #ffffff; font-size: 18px;"><i class="fab fa-instagram"></i> Instagram</a>
+			<a href="#" style="text-decoration: none; color: #000000; margin-right: 15px; font-size: 18px;"><i class="fab fa-facebook"></i> Facebook</a>
+			<a href="#" style="text-decoration: none; color: #000000; margin-right: 15px; font-size: 18px;"><i class="fab fa-twitter"></i> Twitter</a>
+			<a href="#" style="text-decoration: none; color: #000000; font-size: 18px;"><i class="fab fa-linkedin"></i> LinkedIn</a>
 		  </div>
 		</div>
 	  </div>
   
 	  <!-- Footer Bottom -->
-	  <div class="text-center pt-3" style="border-top: 1px solid #ffffff; margin-top: 20px; padding-top: 15px;">
-		<p class="fw-bold fs-6 mb-0">&copy; 2023 XYZ Company, All Rights Reserved</p>
+	  <div class="text-center pt-3" style="border-top: 2px solid #6554C0; margin-top: 10px; padding-top: 15px;">
+		<p class="fw-bold fs-6 mb-0">&copy; 2024 CareerVibe, All Rights Reserved</p>
 	  </div>
 	</div>
-  </footer>
+</footer>
+
   
 <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.5.1.3.min.js') }}"></script>
