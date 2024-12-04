@@ -25,7 +25,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="" class="mb-2">Email*</label>
-                            <input type="text" value="{{ old('email') }}" name="email" id="email" class="form-control @error('email') is-invalid @enderror" placeholder="example@example.com" style="border: 2px solid #A8DF8E;">
+                            <input type="text" value="{{ old('email') }}" name="email" id="email" class="form-control @error('email') is-invalid @enderror" placeholder="example@example.com" style="border: 2px solid #6554C0 ;">
 
                             @error('email')
                                 <p class="invalid-feedback">{{ $message }}</p>
@@ -34,7 +34,7 @@
                         </div> 
                         <div class="mb-3">
                             <label for="" class="mb-2">Password*</label>
-                            <input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" placeholder="Enter Password" style="border: 2px solid #A8DF8E;">
+                            <input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" placeholder="Enter Password" style="border: 2px solid #6554C0 ;">
 
                             @error('password')
                                 <p class="invalid-feedback">{{ $message }}</p>
