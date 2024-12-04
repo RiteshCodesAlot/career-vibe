@@ -11,22 +11,22 @@
                     <form action="" name="registrationForm" id="registrationForm">
                         <div class="mb-3">
                             <label for="" class="mb-2">Name*</label>
-                            <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name" style="border: 2px solid #A8DF8E;">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name" style="border: 2px solid #6554C0 ;">
                             <p></p>
                         </div> 
                         <div class="mb-3">
                             <label for="" class="mb-2">Email*</label>
-                            <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" style="border: 2px solid #A8DF8E;">
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" style="border: 2px solid #6554C0 ;">
                             <p></p>
                         </div> 
                         <div class="mb-3">
                             <label for="" class="mb-2">Password*</label>
-                            <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" style="border: 2px solid #A8DF8E;">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" style="border: 2px solid #6554C0 ;">
                             <p></p>
                         </div> 
                         <div class="mb-3">
                             <label for="" class="mb-2">Confirm Password*</label>
-                            <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Please Confirm Password" style="border: 2px solid #A8DF8E;">
+                            <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Please Confirm Password" style="border: 2px solid #6554C0 ;">
                             <p></p>
                         </div> 
                         <button class="btn btn-primary mt-2">Register</button>
