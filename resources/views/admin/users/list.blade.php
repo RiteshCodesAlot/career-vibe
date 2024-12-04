@@ -29,50 +29,45 @@
                             
                         </div>
                         <div class="table-responsive">
-                            <table class="table ">
-                                <thead class="bg-light">
-                                    <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Mobile</th>
-                                        <th scope="col">Action</th>
+                            <table class="table" style="width: 100%; border-collapse: collapse; font-family: 'Arial', sans-serif;">
+                              <thead style="background: linear-gradient(90deg, #6554C0, #8c7ae6); color: #fff;">
+                                <tr>
+                                  <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">ID</th>
+                                  <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Name</th>
+                                  <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Email</th>
+                                  <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Mobile</th>
+                                  <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                @if ($users->isNotEmpty())
+                                  @foreach ($users as $user)
+                                    <tr style="background-color: #ffffff; border-bottom: 1px solid #ddd; transition: background-color 0.3s; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); border-radius: 4px;">
+                                      <td style="padding: 12px; color: #333; font-size: 14px;">{{ $user->id }}</td>
+                                      <td style="padding: 12px; color: #333; font-size: 14px; font-weight: 500;">{{ $user->name }}</td>
+                                      <td style="padding: 12px; color: #333; font-size: 14px;">{{ $user->email }}</td>
+                                      <td style="padding: 12px; color: #333; font-size: 14px;">{{ $user->mobile }}</td>
+                                      <td style="padding: 12px; text-align: center;">
+                                        <div class="action-dots">
+                                          <button href="#" class="button" data-bs-toggle="dropdown" aria-expanded="false" style="background: none; border: none; cursor: pointer; color: #6554C0; font-size: 18px; transition: color 0.3s;">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                          </button>
+                                          <ul class="dropdown-menu dropdown-menu-end" style="background-color: #ffffff; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); border-radius: 8px; padding: 8px;">
+                                            <li><a class="dropdown-item" href="{{ route("admin.users.edit", $user->id) }}" style="color: #333; padding: 8px; font-size: 14px; border-radius: 4px; transition: background-color 0.3s;"> <i class="fa fa-eye" aria-hidden="true"></i> Edit</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="deleteUser({{ $user->id }})" style="color: #333; padding: 8px; font-size: 14px; border-radius: 4px; transition: background-color 0.3s;"> <i class="fa fa-trash" aria-hidden="true"></i> Delete</a></li>
+                                          </ul>
+                                        </div>
+                                      </td>
                                     </tr>
-                                </thead>
-                                <tbody class="border-0">
-                                    @if ($users->isNotEmpty())
-                                        @foreach ($users as $user)
-                                        <tr class="active">
-                                            <td>{{ $user->id }}</td>
-                                            <td>
-                                                <div class="job-name fw-500">{{ $user->name }}</div>
-                                            </td>
-                                            <td>{{ $user->email }}</td>
-                                            <td>{{ $user->mobile }}</td>
-                                            <td>
-                                                <div class="action-dots ">
-                                                    <button href="#" class="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li><a class="dropdown-item" href="{{ route("admin.users.edit", $user->id) }}"> <i class="fa fa-eye" aria-hidden="true"></i>Edit</a></li>
-                                                        <li><a class="dropdown-item" href="#" onclick="deleteUser({{ $user->id }})"><i class="fa fa-trash" aria-hidden="true"></i>Delete</a></li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                    @else
-                                    <tr>
-                                        <td colspan="5">Job Applications Not Found</td>
-                                    </tr>
-                                    @endif
-
-                                </tbody>
-                                
+                                  @endforeach
+                                @else
+                                  <tr>
+                                    <td colspan="5" style="text-align: center; padding: 15px; color: #6554C0; font-size: 16px; font-weight: 500;">Job Applications Not Found</td>
+                                  </tr>
+                                @endif
+                              </tbody>
                             </table>
-                        </div>
-                        <div>
+                          </div>
                             {{-- for paginate(10); --}}
                             {{ $users->links() }}
                         </div>
