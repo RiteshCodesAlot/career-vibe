@@ -29,37 +29,37 @@
                             
                         </div>
                         <div class="table-responsive">
-                            <table class="table ">
-                                <thead class="bg-light">
+                            <table class="table" style="width: 100%; border-collapse: collapse; font-family: 'Arial', sans-serif;">
+                                <thead style="background: linear-gradient(90deg, #6554C0, #8c7ae6); color: #fff;">
                                     <tr>
-                                        <th scope="col">Job Title</th>
-                                        <th scope="col">User</th>
-                                        <th scope="col">Employer</th>
-                                        <th scope="col">Applied Date</th>
-                                        <th scope="col">Action</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Job Title</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">User</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Employer</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Applied Date</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody class="border-0">
                                     @if ($applications->isNotEmpty())
                                         @foreach ($applications as $application)
-                                        <tr class="active">
-                                            <td>
+                                        <tr style="background-color: #ffffff; border-bottom: 1px solid #ddd; transition: background-color 0.3s; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); border-radius: 4px;">
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">
                                                 {{ $application->job->title }}
                                             </td>
-                                            <td>
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">
                                                 {{ $application->user->name }}
                                             </td>
-                                            <td>
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">
                                                 {{ $application->employer->name }}
                                             </td>                            
-                                            <td>{{ \Carbon\Carbon::parse($application->applied_at)->format('d M, Y') }}</td>
-                                            <td>
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">{{ \Carbon\Carbon::parse($application->applied_at)->format('d M, Y') }}</td>
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">
                                                 <div class="action-dots ">
-                                                    <button href="#" class="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <button href="#" class="button" data-bs-toggle="dropdown" aria-expanded="false" style="background: none; border: none; cursor: pointer; color: #6554C0; font-size: 18px; transition: color 0.3s;">
                                                         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                                                     </button>
-                                                    <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li><a class="dropdown-item" onclick="deleteJobApplication({{ $application->id }})" href="#"><i class="fa fa-trash" aria-hidden="true"></i>Delete</a></li>
+                                                    <ul class="dropdown-menu dropdown-menu-end" style="background-color: #ffffff; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); border-radius: 8px; padding: 8px;">
+                                                        <li><a class="dropdown-item" onclick="deleteJobApplication({{ $application->id }})" style="color: #333; padding: 8px; font-size: 14px; border-radius: 4px; transition: background-color 0.3s;" href="#"><i class="fa fa-trash" aria-hidden="true"></i>Delete</a></li>
                                                     </ul>
                                                 </div>
                                             </td>
@@ -67,7 +67,7 @@
                                         @endforeach
                                     @else
                                     <tr>
-                                        <td colspan="5">Job Applications Not Found</td>
+                                        <td colspan="5" style="text-align: center; padding: 15px; color: #6554C0; font-size: 16px; font-weight: 500;">Job Applications Not Found</td>
                                     </tr>
                                     @endif
 

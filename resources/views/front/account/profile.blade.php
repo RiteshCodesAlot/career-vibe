@@ -57,12 +57,12 @@
                                 </div>
                                 <div class="mb-4">
                                     <label for="" class="mb-2">New Password*</label>
-                                    <input type="password" name="new_password" id="new_password" placeholder="New Password" class="form-control" style="border: 1.5px solid #6554C0 ;">
+                                    <input type="password" name="new_password" id="new_password" placeholder="New Password" class="form-control" style="border: 1.5px solid #6554C0;">
                                     <p></p>
                                 </div>
                                 <div class="mb-4">
                                     <label for="" class="mb-2">Confirm Password*</label>
-                                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="form-control" style="border: 1.5px solid #6554C0 ;">
+                                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="form-control" style="border: 1.5px solid #6554C0;">
                                     <p></p>
                                 </div>                        
                             </div>
@@ -152,7 +152,7 @@
             } else {
                 var errors = response.errors;
 
-                // Handle validation errors
+                // Handle validation errors 
                 $.each(errors, function(key, value) {
                     $('#' + key).addClass('is-invalid')
                         .siblings('p')
