@@ -29,44 +29,44 @@
                             
                         </div>
                         <div class="table-responsive">
-                            <table class="table ">
-                                <thead class="bg-light">
+                            <table class="table" style="width: 100%; border-collapse: collapse; font-family: 'Arial', sans-serif;">
+                                <thead style="background: linear-gradient(90deg, #6554C0, #8c7ae6); color: #fff;">
                                     <tr>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Title</th>
-                                        <th scope="col">Created By</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col">Date</th>
-                                        <th scope="col">Action</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">ID</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Title</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Created By</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Status</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Date</th>
+                                        <th scope="col" style="padding: 12px; text-align: left; border-bottom: 2px solid #8c7ae6; font-weight: 600;">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody class="border-0">
+                                <tbody>
                                     @if ($jobs->isNotEmpty())
                                         @foreach ($jobs as $job)
-                                        <tr class="active">
-                                            <td>{{ $job->id }}</td>
-                                            <td>
+                                        <tr style="background-color: #ffffff; border-bottom: 1px solid #ddd; transition: background-color 0.3s; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); border-radius: 4px;">
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">{{ $job->id }}</td>
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">
                                                 {{-- <div class="job-name fw-500">{{ $job->title }}</div> --}}
                                                 <p>{{ $job->title }}</p>
                                                 <p>Applicants: {{ $job->Applications->count() }}</p>
                                             </td>
-                                            <td>{{ $job->user->name }}</td>
-                                            <td>
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">{{ $job->user->name }}</td>
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">
                                                 @if ($job->status == 1)
                                                     <p style="background-color: #2c753d; color: #ffffff; padding: 2px; border-radius: 15px; text-align: center; font-size: 13px; margin: 0;">Active</p>
                                                 @else
                                                     <p style="background-color: #c51c2d; color: #ffffff; padding: 2px; border-radius: 15px; text-align: center; font-size: 13px; margin: 0;">Block</p>
                                                 @endif
                                             </td>                                            
-                                            <td>{{ \Carbon\Carbon::parse($job->created_at)->format('d M, Y') }}</td>
-                                            <td>
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">{{ \Carbon\Carbon::parse($job->created_at)->format('d M, Y') }}</td>
+                                            <td style="padding: 12px; color: #333; font-size: 14px;">
                                                 <div class="action-dots ">
-                                                    <button href="#" class="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <button href="#" class="button" data-bs-toggle="dropdown" aria-expanded="false" style="background: none; border: none; cursor: pointer; color: #6554C0; font-size: 18px; transition: color 0.3s;">
                                                         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                                                     </button>
-                                                    <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li><a class="dropdown-item" href={{ route('admin.jobs.edit', $job->id) }}"> <i class="fa fa-eye" aria-hidden="true"></i>Edit</a></li>
-                                                        <li><a class="dropdown-item" onclick="deleteJob({{ $job->id }})" href="#"><i class="fa fa-trash" aria-hidden="true"></i>Delete</a></li>
+                                                    <ul class="dropdown-menu dropdown-menu-end" style="background-color: #ffffff; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); border-radius: 8px; padding: 8px;">
+                                                        <li><a class="dropdown-item" href="{{ route('admin.jobs.edit', $job->id) }}" style="color: #333; padding: 8px; font-size: 14px; border-radius: 4px; transition: background-color 0.3s;"> <i class="fa fa-eye" aria-hidden="true"></i>Edit</a></li>
+                                                        <li><a class="dropdown-item" onclick="deleteJob({{ $job->id }})" style="color: #333; padding: 8px; font-size: 14px; border-radius: 4px; transition: background-color 0.3s;" href="#" ><i class="fa fa-trash" aria-hidden="true"></i>Delete</a></li>
                                                     </ul>
                                                 </div>
                                             </td>
@@ -74,7 +74,7 @@
                                         @endforeach
                                     @else
                                     <tr>
-                                        <td colspan="5">Job Applications Not Found</td>
+                                        <td colspan="5" style="text-align: center; padding: 15px; color: #6554C0; font-size: 16px; font-weight: 500;">Job Applications Not Found</td>
                                     </tr>
                                     @endif
 
